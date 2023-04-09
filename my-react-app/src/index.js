@@ -27,14 +27,6 @@ import {
   Link,
 } from "react-router-dom";
 
-function get_percentage(people, square_feet, obstacles){
-    if (obstacles = false){
-      return (square_feet/36)
-    } else
-    return (square_feet/)
-
-}
-
 
 const router = createBrowserRouter([
   {

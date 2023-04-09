@@ -24,9 +24,6 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction component={Link} to="/dashboard" label="Dashboard" icon={<EqualizerIcon />} />
-        <BottomNavigationAction component={Link} to="/stream" label="Stream" icon={<VideoCameraFrontIcon />} />
-        <BottomNavigationAction component={Link} to="/notifications" label="Notifications" icon={<NotificationsIcon />} />
       </BottomNavigation>
   );
 }
