@@ -15,22 +15,32 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
+import { load_values } from './stream';
+
 
 
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
-  RouterProvider, Navigate, useNavigation,
+  RouterProvider,
   Route,
   Link,
 } from "react-router-dom";
+
+function get_percentage(people, square_feet, obstacles){
+    if (obstacles = false){
+      return (square_feet/36)
+    } else
+    return (square_feet/)
+
+}
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Navigate to="/dashboard" replace={true} />
+      <p> hi </p>
     ),
   },
   {
@@ -83,11 +93,8 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={(router)} />
 );
 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
