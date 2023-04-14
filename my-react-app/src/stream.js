@@ -85,7 +85,7 @@ function Stream() {
   const [pop, set_pop] = useState();
   const [img, set_img] = useState("");
   const [room_type, set_room_type] = useState();
-  const [past_pops, set_past_pops] = useState([]);
+  const [past_pops, set_past_pops] = useState([14]);
   const [space_type, set_space_type] = useState([]);
 
   function get_maximum_occupancy(){
@@ -102,11 +102,11 @@ function Stream() {
 
   useEffect(()=>{
     const int = setInterval(()=>{
-      fetch("https://e583-65-113-61-98.ngrok-free.app/ppl").then(res=>res.text()).then((pop)=>{
+      fetch("https://5e92-129-2-194-203.ngrok-free.app/ppl").then(res=>res.text()).then((pop)=>{
         set_pop(pop)
         set_past_pops(past_pops=>[...past_pops, {pop}])
       })
-      fetch("https://e583-65-113-61-98.ngrok-free.app/img").then(res=>res.text()).then((img)=>{
+      fetch("https://5e92-129-2-194-203.ngrok-free.app/img").then(res=>res.text()).then((img)=>{
         set_img(img)
       })
     }, 100)
